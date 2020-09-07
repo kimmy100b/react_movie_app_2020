@@ -1,0 +1,9 @@
+{
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+"editor.formatonsave": true,
+"editor.formatOnSave": true,
+"editor.formatOnType": true
+}
