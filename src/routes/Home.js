@@ -30,7 +30,20 @@ class Home extends React.Component {
         ) : (
           <div className="movies">
             {movies.map((movie) => {
-              return <Movie key={movie.id} id={movie.id} year={movie.year} title={movie.title} summary={movie.summary} poster={movie.medium_cover_image} genres={movie.genres} />;
+              return (
+                <Movie
+                  key={movie.id}
+                  id={movie.id}
+                  year={movie.year}
+                  title={movie.title}
+                  runtime={movie.runtime}
+                  summary={movie.summary}
+                  description={movie.description_full}
+                  poster={movie.medium_cover_image}
+                  genres={movie.genres}
+                  rating={movie.rating}
+                />
+              );
             })}
           </div>
         )}

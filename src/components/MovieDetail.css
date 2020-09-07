@@ -1,0 +1,13 @@
+.movie-detail {
+  justify-items: center;
+  width: 60%;
+  margin: 50px;
+  align-items: center;
+}
+
+.detail {
+  background-color: white;
+}
+.detail {
+  display: flex;
+}
