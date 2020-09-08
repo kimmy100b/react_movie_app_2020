@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import StarRatingComponent from "react-star-rating-component";
 import PropTypes from "prop-types";
 import "./MovieDetail.css";
 
@@ -11,23 +11,30 @@ function MovieDetail({ id, year, title, runtime, summary, description, poster, g
         <div className="detail-content">
           <h1 className="detail-title">{title}</h1>
           <p className="detail-title-sm">
-            {title},{year}
+            {title}, {year}
           </p>
-          <h3 className="detail-rating"> 평점 : {rating}/10</h3>
-          <h4 className="genres-label"> 장르</h4>
-          <ul className="detail-genres">
+          <div className="detail-rating">
+            <h4 class="label">평점</h4>
+            <StarRatingComponent name="rating" class="rating" starCount={5} value={rating / 2} starColor="#FF2E3A" emptyStarColor="#737373" />
+            <h3 class="rating-value">{rating}</h3>
+          </div>
+          <div className="detail-genres">
+            <h4 className="label"> 장르 </h4>
             {genres.map((genre, index) => (
-              <li key={index} className="genres-genre">
-                {genre}
-              </li>
+              <p key={index} className="genres-genre">
+                {genre} &nbsp;
+              </p>
             ))}
-          </ul>
-          <div className="detail-description">
-            <h4 className="description-label"> 줄거리</h4>
-            <p>{description}</p>
+          </div>
+          <div className="detail-runtime">
+            <h4 className="label"> 상영시간 </h4>
+            <p>{runtime} 분 </p>
           </div>
         </div>
-        <div className="detail-date"></div>
+      </div>
+      <div className="detail-description">
+        <h4 className="label"> 줄거리</h4>
+        <p>{description}</p>
       </div>
     </section>
   );

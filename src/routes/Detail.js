@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import MovieDetail from "../components/MovieDetail";
 
 class Detail extends React.Component {
@@ -15,7 +14,7 @@ class Detail extends React.Component {
     if (location.state) {
       return (
         <MovieDetail
-          key={location.state.id}
+          // key={location.state.id}
           id={location.state.id}
           year={location.state.year}
           title={location.state.title}
