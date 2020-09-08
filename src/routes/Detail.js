@@ -1,5 +1,6 @@
 import React from "react";
 import MovieDetail from "../components/MovieDetail";
+import "./Detail.css";
 
 class Detail extends React.Component {
   componentDidMount() {

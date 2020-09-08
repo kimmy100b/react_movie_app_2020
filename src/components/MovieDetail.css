@@ -1,19 +1,3 @@
-h4 {
-  padding: 0px;
-  margin: 0px;
-}
-
-p {
-  padding: 0px;
-  margin: 0px;
-}
-
-.movie-detail {
-  margin: 100px 200px;
-  padding: 55px;
-  background-color: white;
-}
-
 .detail {
   display: flex;
   height: 100%;
@@ -37,7 +21,8 @@ p {
 }
 
 .detail-rating,
-.detail-runtime {
+.detail-runtime,
+.detail-genres {
   display: flex;
   align-items: baseline;
 }
@@ -50,10 +35,6 @@ p {
 .rating-value {
   margin-left: 5px;
   color: #181818;
-}
-
-.detail-genres {
-  display: flex;
 }
 
 .detail-runtime .label,
